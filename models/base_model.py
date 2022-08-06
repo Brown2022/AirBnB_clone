@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """
-A module that implements the BaseModel python class
+A modules that implements the BaseModel python class and define all common attributes/methids for all other classes
 
 """
 
 from uuid import uuid4
 from datetime import datetime
+import models
+
 
 class BaseModel:
     """
@@ -61,4 +63,3 @@ class BaseModel:
                 j = self.__dict__[i].isoformat()
                 dict_copy[i] = j
         return dict_copy
-
