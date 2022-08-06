@@ -50,24 +50,3 @@ The type of shell being used can be detected (BASH only).
 We can also determine if we are using an interactive or non-interactive shell by,
 
 [[ $- == *i* ]] && echo ‘Interactive’ || echo ‘not-interactive’
-
-* examples
-
-KornShell (ksh): written by David Korn based on the Bourne shell sources[8] while working at Bell Labs
-
-Public domain Korn shell (pdksh)
-
-Bourne-Again shell (bash): written as part of the GNU Project to provide a superset of Bourne Shell functionality. This shell can be found installed and is the default interactive shell for users on most Linux systems.
-
-Debian Almquist shell (dash): a modern replacement for ash in Debian and Ubuntu
-
-Almquist shell (ash):
-written as a BSD-licensed replacement for the Bourne Shell; often used in resource-constrained environments. The sh of FreeBSD, NetBSD (and their derivatives) are based on ash that has been enhanced to be POSIX conformant.
-
-KornShell (ksh) is a Unix shell which was developed by David Korn at Bell Labs in the early 1980s and announced at USENIX on July 14, 1983.[1][2] The initial development was based on Bourne shell source code.[7] Other early contributors were Bell Labs developers Mike Veach and Pat Sullivan, who wrote the Emacs and vi-style line editing modes' code, respectively.[8] KornShell is backward-compatible with the Bourne shell and includes many features of the C shell, inspired by the requests of Bell Labs users.
-
-The C shell (csh or the improved version, tcsh) is a Unix shell created by Bill Joy while he was a graduate student at University of California, Berkeley in the late 1970s. It has been widely distributed, beginning with the 2BSD release of the Berkeley Software Distribution (BSD) which Joy first distributed in 1978.[2][3] Other early contributors to the ideas or the code were Michael Ubell, Eric Allman, Mike O'Brien and Jim Kulp.[4]
-
-The C shell is a command processor which is typically run in a text window, allowing the user to type and execute commands. The C shell can also read commands from a file, called a script. Like all Unix shells, it supports filename wildcarding, piping, here documents, command substitution, variables and control structures for condition-testing and iteration. What differentiated the C shell from others, especially in the 1980s, were its interactive features and overall style. Its new features made it easier and faster to use. The overall style of the language looked more like C and was seen as more readable.
-
-On many systems, such as macOS and Red Hat Linux, csh is actually tcsh, an improved version of csh. Often one of the two files is either a hard link or a symbolic link to the other, so that either name refers to the same improved version of the C shell.
