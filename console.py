@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+<<<<<<< HEAD
 Console for object management and storage persistant
 """
 import models
@@ -227,4 +228,39 @@ saves it (to the JSON file) and prints the id.
 
 
 if __name__ == "__main__":
+=======
+The Console
+"""
+
+
+import cmd
+
+class HBNBCommand(cmd.Cmd):
+    """
+    An interactive Command Line Interface
+    """
+
+    prompt = '(hbnb) '
+
+    def do_emptyline(self):
+        """
+        Do nothing when empty line + enter
+        """
+        return False
+
+    def do_EOF(self, arg):
+        """
+        Exit the Command Line
+        """
+        return True
+
+    def do_quit(self, arg):
+        """
+        Exit the Command Line
+        """
+        return True
+
+
+if __name__ == '__main__':
+>>>>>>> 91045510f421c9052fb86488c3dbbdb2366ea639
     HBNBCommand().cmdloop()
