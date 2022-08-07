@@ -1,26 +1,30 @@
 #!/usr/bin/python3
-"""
-Test file for user class
-"""
-
+"""Test suite for Review class in models.review"""
 import unittest
-from models.review import Review
+
 from models.base_model import BaseModel
+from models.review import Review
 
 
-class TestClass(unittest.TestCase):
-    """Test cases"""
+class TestReview(unittest.TestCase):
+    """Test cases for the Review class"""
 
-    def test_create_istance(self):
-        """create a new instance"""
-        new_state = Review()
-        self.assertIsInstance(new_state, Review)
+    def setUp(self):
+        self.review = Review()
+        self.attr_list = [
+            "place_id",
+            "user_id",
+            "text"
+        ]
 
-    def test_create_istance2(self):
-        """create a new instance"""
-        new_state = Review()
-        self.assertIsInstance(new_state, BaseModel)
+    def test_review_is_a_subclass_of_basemodel(self):
+        self.assertTrue(issubclass(type(self.review), BaseModel))
 
+    def test_attrs_are_class_attrs(self):
+        for attr in self.attr_list:
+            self.assertTrue(hasattr(self.review, attr))
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_class_attrs(self):
+        for attr in self.attr_list:
+            self.assertIs(type(getattr(self.review, attr)), str)
+            self.assertFalse(bool(getattr(self.review, attr)))

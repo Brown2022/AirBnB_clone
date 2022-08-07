@@ -1,26 +1,23 @@
 #!/usr/bin/python3
-"""
-Test file for user class
-"""
-
+"""Test suite for the State class of the models.state module"""
 import unittest
-from models.state import State
+
 from models.base_model import BaseModel
+from models.state import State
 
 
-class TestClass(unittest.TestCase):
-    """Test cases"""
+class TestState(unittest.TestCase):
+    """Test cases for the State class"""
 
-    def test_create_istance(self):
-        """create a new instance"""
-        new_state = State()
-        self.assertIsInstance(new_state, State)
+    def setUp(self):
+        self.state = State()
 
-    def test_create_istance2(self):
-        """create a new instance"""
-        new_state = State()
-        self.assertIsInstance(new_state, BaseModel)
+    def test_state_is_a_subclass_of_basemodel(self):
+        self.assertTrue(issubclass(type(self.state), BaseModel))
 
+    def test_attr_is_a_class_attr(self):
+        self.assertTrue(hasattr(self.state, "name"))
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_class_attrs(self):
+        self.assertIs(type(self.state.name), str)
+        self.assertFalse(bool(self.state.name))

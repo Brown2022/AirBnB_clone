@@ -1,41 +1,22 @@
 #!/usr/bin/python3
-"""
-Test file for city class
-"""
-
+"""Test suite for the City class of the models.city module"""
 import unittest
-from models.city import City
+
 from models.base_model import BaseModel
+from models.city import City
 
 
-class TestClass(unittest.TestCase):
-    """Test cases"""
+class TestCity(unittest.TestCase):
+    """Test cases for the City class"""
 
     def setUp(self):
         self.city = City()
-        return super().setUp()
+        self.attr_list = ["state_id", "name"]
 
-    def tearDown(self):
-        del(self.city)
-        return super().tearDown()
+    def test_city_is_a_subclass_of_basemodel(self):
+        self.assertTrue(issubclass(type(self.city), BaseModel))
 
-    def test_create_istance(self):
-        """create a new instance"""
-        self.assertIsInstance(self.city, City)
-
-    def test_create_istance_check_parent(self):
-        """check if it's instance of parent"""
-        self.assertIsInstance(self.city, BaseModel)
-
-    def test_class_attribut(self):
-        """initialze class attribute"""
-        self.city.name = "kigali"
-        self.assertIs(self.city.name, 'kigali')
-
-    def test_parent_of_city(self):
-        """check if city is parent of BaseModel"""
-        self.assertEqual(isinstance(self.city, BaseModel), True)
-
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_attrs_are_class_attrs(self):
+        for attr in self.attr_list:
+            self.assertIs(type(getattr(self.city, attr)), str)
+            self.assertFalse(bool(getattr(self.city, attr)))
