@@ -1,86 +1,23 @@
-#!/usr/bin/env python3
-"""
-Unitest for models/amenity.py
-
-Unittest classes:
-    Test_amentity_instantiation
-    """
-import os
+#!/usr/bin/python3
+"""Test suite for Amenity class of the models.amenity module"""
 import unittest
-import models
-from datetime import datetime
+
+from models.base_model import BaseModel
 from models.amenity import Amenity
-from time import sleep
 
 
-class Test_models_amenity(unittest.TestCase):
-    """
-        Test_models_amenity class
-    """
+class TestAmenity(unittest.TestCase):
+    """Test cases for the Amenity class"""
 
-    def test_instantiation_no_args(self):
-        self.assertEqual(Amenity, type(Amenity()))
-     
-    def test_args_unused(self):
-        amen1 = Amenity(None)
-        self.assertNotIn(None, amen1.__dict__.values())
+    def setUp(self):
+        self.amenity = Amenity()
 
-    def test_instantiation_kwargs(self):
-        am_date = datetime.today()
-        dt_iso = am_date.isoformat()
-        amen1 = Amenity(id="123", created_at=dt_iso, updated_at=dt_iso)
-        self.assertEqual(amen1.id, "123")
-        self.assertEqual(amen1.created_at, am_date)
-        self.assertEqual(amen1.updated_at, am_date)
+    def test_amenity_is_a_subclass_of_basemodel(self):
+        self.assertTrue(issubclass(type(self.amenity), BaseModel))
 
-    def test_instantiation_kwargs_none(self):
-        with self.assertRaises(TypeError):
-            Amenity(id=None, created_at=None, updated_at=None)
+    def test_attr_is_a_class_attr(self):
+        self.assertTrue(hasattr(self.amenity, "name"))
 
-    def test_instantiation_stored_in_objects(self):
-        self.assertIn(Amenity(), models.storage.all().values())
-
-    def test_id_public_str(self):
-        self.assertEqual(str, type(Amenity().id))
-
-    def test_created_public_datetime(self):
-         self.assertEqual(datetime, type(Amenity().updated_at))
-
-    def test_name_public_class_attr(self):
-        amen1 = Amenity()
-        self.assertEqual(str, type(Amenity.name))
-        self.assertIn("name", dir(Amenity()))
-        self.assertNotIn("name", amen1.__dict__)
-
-    def test_two_amenities_ids(self):
-        amen1 = Amenity()
-        amen2 = Amenity()
-        self.assertNotEqual(amen1.id, amen2.id)
-
-    def test_two_amenities_created_at(self):
-        amen1 = Amenity()
-        sleep(0.1)
-        amen2 = Amenity()
-        self.assertLess(amen1.created_at, amen2.created_at)
-
-    def test_two_amenities_updated_at(self):
-        amen1 = Amenity()
-        sleep(0.1)
-        amen2 = Amenity()
-        self.assertLess(amen1.updated_at, amen2.updated_at)
-
-    def test_amenities_str(self):
-        am_date = datetime.today()
-        dt_repr = repr(am_date)
-        amen1 = Amenity()
-        amen1.id = "121212"
-        amen1.created_at = amen1.updated_at = am_date
-        amstr = amen1.__str__()
-        self.assertIn("[Amenity] (121212)", amstr)
-        self.assertIn("'id': '121212'", amstr)
-        self.assertIn("'created_at': " + dt_repr, amstr)
-        self.assertIn("'updated_at': " + dt_repr, amstr)
-
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_class_attr(self):
+        self.assertIs(type(self.amenity.name), str)
+        self.assertFalse(bool(getattr(self.amenity, "name")))

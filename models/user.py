@@ -1,23 +1,19 @@
-#!/usr/bin/env python3
-""" Class User """
+#!/usr/bin/python3
+"""Implements the user's model"""
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """ Class user that inherits from BaseModel
-        Public class attributes:
-            email: (str) - user's email
-            password: (str) - user's password
-            first_name: (str) - user's first name
-            last_name: (str) - user's last name
+    """
+    Inherits from the BaseModel class and add user's functionalities
+
+    Args:
+        email (str): the email of the user
+        password (str): the password of the user
+        first_name (str): the first name of the user
+        last_name (str): the last name of the user
     """
     email = ""
     password = ""
     first_name = ""
     last_name = ""
-
-    def __init__(self, *args, **kwargs):
-        """ Initialize class User
-            Args:
-                *args: list of strings
-                **kwargs: dictionary of strings

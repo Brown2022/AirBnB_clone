@@ -1,46 +1,23 @@
-#!/usr/bin/env python3
-"""
-Unitest for models/state.py
-
-Unittest classes:
-    test_state_instantiates
-    test_state_save
-    test_state_dict
-    """
-
+#!/usr/bin/python3
+"""Test suite for the State class of the models.state module"""
 import unittest
-import models
+
+from models.base_model import BaseModel
 from models.state import State
 
 
-class test_state_instantiates(unittest.TestCase):
-    """ Unittest for testing instantiation"""
+class TestState(unittest.TestCase):
+    """Test cases for the State class"""
 
-    def test_instantiation(self):
-        self.assertIs(State, type(State()))
+    def setUp(self):
+        self.state = State()
 
-    def test_instantiation_with_kwargs(self):
-        self.assertIs(State, type(State(name="California")))
+    def test_state_is_a_subclass_of_basemodel(self):
+        self.assertTrue(issubclass(type(self.state), BaseModel))
 
-class test_state_save(unittest.TestCase):
-    """ Unittest for testing save"""
+    def test_attr_is_a_class_attr(self):
+        self.assertTrue(hasattr(self.state, "name"))
 
-    def test_save(self):
-        state = State()
-        state.save()
-        self.assertNotEqual(state.created_at, state.updated_at)
-
-    def test_save_updated(self):
-        state = State()
-        state.save()
-        state.save()
-        self.assertNotEqual(state.created_at, state.updated_at)
-
-    def test_save_to_json(self):
-        state = State()
-        state.save()
-        self.assertIs(type(state.to_dict()), dict)
-
-
-if __name__ == "__main__":
-    unittest.main()
+    def test_class_attrs(self):
+        self.assertIs(type(self.state.name), str)
+        self.assertFalse(bool(self.state.name))

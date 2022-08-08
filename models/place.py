@@ -1,37 +1,33 @@
 #!/usr/bin/python3
-""" Place Class"""
+"""Contains the Place model"""
 from models.base_model import BaseModel
 
-Class PLace(BaseModel):
-    """ The PLace class inheriting from BaseModel
-    Public class attributes:
-    city_id: (str) - string city_id
-    user_id: (str) - string user_id
-    name_ie: (str) - name of the place
-    number_rooms:(int) - number of rooms
-    bomber_bathrooms: (int) - number of bathrooms
-    max_quest: (int) - Maximum number of guest to be accomodated
-    price_by_night: (int) - per night price
-    latitude: (float) - place latitude
-    longitude: (float) - place longitude
-    amenity_ids: (list) - amenity.id list"""
+
+class Place(BaseModel):
+    """
+    Implements the Place model
+
+    Args:
+        city_id (str): The City id.
+        user_id (str): The User id.
+        name (str): The name of the place.
+        description (str): The description of the place.
+        number_rooms (int): The number of rooms of the place.
+        number_bathrooms (int): The number of bathrooms of the place.
+        max_guest (int): The maximum number of guests of the place.
+        price_by_night (int): The price by night of the place.
+        latitude (float): The latitude of the place.
+        longitude (float): The longitude of the place.
+        amenity_ids (list): A list of Amenity ids.
+    """
     city_id = ""
     user_id = ""
     name = ""
     description = ""
-    number_room = 0
+    number_rooms = 0
     number_bathrooms = 0
-    max_quest = 0
+    max_guest = 0
     price_by_night = 0
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
-
-    def __init__(self, *args, **kwargs):
-
-        """ Initializes Class Place 
-        Args:
-            *args: (str) string lists
-            **kwargs: (str) strings dictionary
-            """
-            super().__init__(*args, **kwargs)
