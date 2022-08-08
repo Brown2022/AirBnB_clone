@@ -31,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
        -classes is a list of all the classes that inherit from BaseModel.
        -my_objects is a dictionary of all the instances of the classes
        in classes.
-       -my_classes oa diccionary whit the classes.
+       -my_classes is a dictionary with the classes.
        -storage is an instance of FileStorage.
        -self is an instance of HBNBCommand to use the methods of the class.
        -args is a list of arguments passed to the command.
