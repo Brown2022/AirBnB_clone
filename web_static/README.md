@@ -27,29 +27,29 @@
 
 ## Static web
 
-* [0-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/0-index.html)
-* [1-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/1-index.html)
-* [2-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/2-index.html)
-* [3-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/3-index.html)
-* [4-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/4-index.html)
-* [5-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/5-index.html)
-* [6-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/6-index.html)
-* [7-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/7-index.html)
-* [8-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/8-index.html)
-* [100-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/100-index.html)
-* [101-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/101-index.html)
-* [102-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/102-index.html)
-* [103-index.html](https://ralexrivero.github.io/AirBnB_clone/web_static/103-index.html)
+* [0-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/0-index.html)
+* [1-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/1-index.html)
+* [2-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/2-index.html)
+* [3-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/3-index.html)
+* [4-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/4-index.html)
+* [5-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/5-index.html)
+* [6-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/6-index.html)
+* [7-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/7-index.html)
+* [8-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/8-index.html)
+* [100-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/100-index.html)
+* [101-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/101-index.html)
+* [102-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/102-index.html)
+* [103-index.html](https://Brown2022.github.io/AirBnB_clone/web_static/103-index.html)
 
 ## Author
 
-Ronald
+Stephen
 
-<a href="https://twitter.com/ralex_uy" target="_blank">  <img align="left" alt="Ronald Rivero | Twitter" src="https://img.shields.io/twitter/follow/ralex_uy?style=social" /> </a>
+<a href="https://twitter.com/@stephen2022" target="_blank">  <img align="left" alt="Ronald Rivero | Twitter" src="https://img.shields.io/twitter/follow/@stephen2022?style=social" /> </a>
 
 <a href="https://www.linkedin.com/in/ronald-rivero/" target="_blank">  <img align="left" alt="Ronald Rivero | LinkedIn" src="https://img.shields.io/badge/LinkedIn-blue?style=social&logo=linkedin" /> </a>
 
-<a href="https://github.com/ralexrivero/" target="_blank">  <img align="left" src="https://img.shields.io/github/followers/ralexrivero?style=social" alt="Ralex | Github"> </a>
+<a href="https://github.com/Brown2022/" target="_blank">  <img align="left" src="https://img.shields.io/github/followers/Brown2022?style=social" alt="Brown | Github"> </a>
 
 <br/>
 
